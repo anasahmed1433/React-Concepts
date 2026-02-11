@@ -1,0 +1,131 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Full screen animated background */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #ff6a00, #ee0979);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Background animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glass Card */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    padding: 45px;
+    border-radius: 25px;
+    text-align: center;
+    width: 380px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Floating effect */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Counter */
+.counter {
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transition: 0.3s ease;
+}
+
+/* Button group */
+.btn-group {
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 22px;
+    margin: 8px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient buttons */
+.green {
+    background: linear-gradient(45deg, #00b09b, #96c93d);
+}
+
+.red {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+
+.blue {
+    background: linear-gradient(45deg, #396afc, #2948ff);
+}
+
+/* Hover animation */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Click effect */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Input section */
+.input-section input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input focus glow */
+.input-section input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Name display */
+.name {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    min-height: 30px;
+}

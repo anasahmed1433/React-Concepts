@@ -1,0 +1,207 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+  font-family: "Orbitron", "Segoe UI", monospace;
+}
+
+
+
+/* ===== CYBER BACKGROUND ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top, rgba(0, 255, 255, 0.15), transparent 40%),
+    radial-gradient(circle at bottom, rgba(255, 0, 255, 0.15), transparent 40%),
+    linear-gradient(135deg, #05050f, #0a0a1a);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ===== CARD ===== */
+.login,
+.signup {
+  width: 420px;
+  padding: 36px;
+  border-radius: 18px;
+
+  background: rgba(10, 10, 30, 0.9);
+  border: 1px solid rgba(0, 255, 255, 0.35);
+
+  box-shadow:
+    0 0 25px rgba(0, 255, 255, 0.25),
+    0 0 60px rgba(255, 0, 255, 0.15),
+    inset 0 0 15px rgba(0, 255, 255, 0.15);
+
+  animation: neonFloat 3s ease-in-out infinite alternate;
+}
+
+/* Floating glow */
+@keyframes neonFloat {
+  from {
+    transform: translateY(0);
+    box-shadow:
+      0 0 25px rgba(0, 255, 255, 0.25),
+      0 0 60px rgba(255, 0, 255, 0.15);
+  }
+
+  to {
+    transform: translateY(-6px);
+    box-shadow:
+      0 0 40px rgba(0, 255, 255, 0.45),
+      0 0 90px rgba(255, 0, 255, 0.35);
+  }
+}
+
+/* ===== HEADINGS ===== */
+.login h1,
+.signup h1,
+.login h2,
+.signup h2 {
+  text-align: center;
+  margin-bottom: 26px;
+  color: #00ffff;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
+}
+
+/* ===== LABELS ===== */
+.login label,
+.signup label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #ff4cff;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ===== INPUTS ===== */
+.login input,
+.signup input {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 20px;
+
+  background: transparent;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 10px;
+
+  color: #00ffff;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  box-shadow: inset 0 0 12px rgba(0, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.login input::placeholder,
+.signup input::placeholder {
+  color: rgba(0, 255, 255, 0.4);
+}
+
+.login input:focus,
+.signup input:focus {
+  outline: none;
+  border-color: #ff4cff;
+
+  box-shadow:
+    0 0 15px #ff4cff,
+    inset 0 0 18px rgba(255, 76, 255, 0.4);
+
+  transform: scale(1.02);
+}
+
+/* ===== RADIO ===== */
+.signup input[type="radio"] {
+  accent-color: #00ffff;
+  margin-right: 6px;
+}
+
+.signup div {
+  margin-bottom: 20px;
+  color: #00ffff;
+  font-size: 13px;
+}
+
+/* ===== BUTTON ===== */
+.login button,
+.signup button {
+  width: 100%;
+  padding: 14px;
+
+  background: linear-gradient(135deg, #00ffff, #ff4cff);
+  color: #05050f;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.8),
+    0 0 40px rgba(255, 76, 255, 0.6);
+
+  transition: all 0.25s ease;
+}
+
+.login button:hover,
+.signup button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 30px rgba(0, 255, 255, 1),
+    0 0 60px rgba(255, 76, 255, 0.9);
+}
+
+.login button:active,
+.signup button:active {
+  transform: scale(0.95);
+}
+
+/* ===== LINKS ===== */
+.signup a,
+.login+div a {
+  color: #00ffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.signup a:hover,
+.login+div a:hover {
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* ===== SIGNUP TEXT BELOW LOGIN ===== */
+.login+div {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #ff4cff;
+}
+
+/* ===== SUCCESS TEXT ===== */
+.signup p {
+  font-size: 14px;
+  color: #00ffff;
+  margin: 6px 0;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+
+  .login,
+  .signup {
+    width: 92%;
+    padding: 26px;
+  }
+}
